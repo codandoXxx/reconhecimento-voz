@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, PermissionsAndroid, Platform, StyleSheet, ToastAndroid } from 'react-native';
 import Voice from '@react-native-voice/voice';
 import AudioRecord from "react-native-audio-record";
@@ -9,7 +9,6 @@ import * as BackgroundFetch from 'expo-background-fetch';
 export default function App() {
   const [recording, setRecording] = useState(false);
   const [detectedWord, setDetectedWord] = useState(null);
-  const [socket, setSocket] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
   const socketRef = useRef<Socket>();
 
